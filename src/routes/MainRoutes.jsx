@@ -1,6 +1,4 @@
 import { lazy } from 'react';
-
-// project import
 import Loadable from 'components/Loadable';
 import Dashboard from 'layout/Dashboard';
 
@@ -12,12 +10,7 @@ const Service = Loadable(lazy(() => import('pages/services/index')));
 const Slider = Loadable(lazy(() => import('pages/sliders/index')));
 const Blogs = Loadable(lazy(() => import('pages/blogs/index')));
 const Team = Loadable(lazy(() => import('pages/teams/index')));
-
-
-// render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
-
-// ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
   path: '/admin',
@@ -25,13 +18,13 @@ const MainRoutes = {
   children: [
     { path: '/dashboard', element: <DashboardDefault /> },
     { path: '/dashboard/color', element: <Color /> },
-    { path: '/dashboard/service', element: <Service /> },
-    { path: '/dashboard/careers', element: <Slider /> },
+    { path: '/dashboard/shadows', element: <Shadow /> },
+    { path: '/dashboard/typography', element: <Typography /> },
+    { path: '/dashboard/services', element: <Service /> },
+    { path: '/dashboard/sliders', element: <Slider /> },
     { path: '/dashboard/blogs', element: <Blogs /> },
     { path: '/dashboard/teams', element: <Team /> },
     { path: '/dashboard/sample-page', element: <SamplePage /> },
-    { path: '/dashboard/shadow', element: <Shadow /> },
-    { path: '/dashboard/typography', element: <Typography /> }
   ]
 };
 
