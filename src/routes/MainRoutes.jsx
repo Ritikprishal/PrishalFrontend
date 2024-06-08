@@ -21,7 +21,7 @@ const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')))
 
 const MainRoutes = {
   path: '/',
-  element: <DashboardDefault />,
+  element: <Dashboard />,
   children: [
     { path: 'dashboard', element: <DashboardDefault /> },
     { path: 'dashboard/color', element: <Color /> },
