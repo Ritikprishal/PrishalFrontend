@@ -32,7 +32,7 @@ const MainRoutes = {
       element: <Color />
     },
     {
-      path: '/dashboard/service',
+      path: 'dashboard/service',
       element: <Service />
     },
     {
