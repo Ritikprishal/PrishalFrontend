@@ -6,6 +6,14 @@ import LoginRoutes from './LoginRoutes';
 
 // ==============================|| ROUTING RENDER ||============================== //
 
-const router = createBrowserRouter([MainRoutes, LoginRoutes]);
+const router = isAuthenticated()?createBrowserRouter([MainRoutes]):createBrowserRouter([LoginRoutes]);
+
+const isAuthenticated=()=>{
+    const token=localStorage.getItem('authToken')
+    if(token){
+        return true
+    }
+    return false
+}
 
 export default router;
