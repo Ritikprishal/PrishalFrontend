@@ -19,7 +19,7 @@ const pages = {
       id: 'service',
       title: 'Services',
       type: 'item',
-      url: '/dashboard/service',
+      url: '/admin/service',
       icon: icons.LoginOutlined,
       target: true
     },
@@ -27,7 +27,7 @@ const pages = {
       id: 'blogs',
       title: 'Blogs',
       type: 'item',
-      url: '/dashboard/blogs',
+      url: '/admin/blogs',
       icon: icons.LoginOutlined,
       target: true
     },
@@ -35,7 +35,7 @@ const pages = {
       id: 'sliders',
       title: 'Careers',
       type: 'item',
-      url: '/dashboard/careers',
+      url: '/admin/careers',
       icon: icons.LoginOutlined,
       target: true
     },
@@ -43,7 +43,7 @@ const pages = {
       id: 'teams',
       title: 'Teams',
       type: 'item',
-      url: '/dashboard/teams',
+      url: '/admin/teams',
       icon: icons.LoginOutlined,
       target: true
     }
