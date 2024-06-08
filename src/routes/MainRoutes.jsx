@@ -16,15 +16,15 @@ const MainRoutes = {
   path: '/admin',
   element: <Dashboard />,
   children: [
-    { path: '/dashboard', element: <DashboardDefault /> },
-    { path: '/dashboard/color', element: <Color /> },
-    { path: '/dashboard/shadows', element: <Shadow /> },
-    { path: '/dashboard/typography', element: <Typography /> },
-    { path: '/dashboard/services', element: <Service /> },
-    { path: '/dashboard/sliders', element: <Slider /> },
-    { path: '/dashboard/blogs', element: <Blogs /> },
-    { path: '/dashboard/teams', element: <Team /> },
-    { path: '/dashboard/sample-page', element: <SamplePage /> },
+    { path: '/admin/dashboard', element: <DashboardDefault /> },
+    { path: '/admin/color', element: <Color /> },
+    { path: '/admin/shadows', element: <Shadow /> },
+    { path: '/admin/typography', element: <Typography /> },
+    { path: '/admin/services', element: <Service /> },
+    { path: '/admin/sliders', element: <Slider /> },
+    { path: '/admin/blogs', element: <Blogs /> },
+    { path: '/admin/teams', element: <Team /> },
+    { path: '/admin/sample-page', element: <SamplePage /> },
   ]
 };
 
