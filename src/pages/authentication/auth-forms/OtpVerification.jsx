@@ -31,7 +31,7 @@ const OtpVerification = () => {
                     console.log('OTP verification successful', response.data);
                     localStorage.setItem('authToken',response.data.token)
                     // Redirect or further processing
-                    navigate('/dashboard');
+                    navigate('/admin');
 
                 } else {
                     // Handle unsuccessful OTP verification here
