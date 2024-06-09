@@ -17,7 +17,7 @@ const dashboard = {
       id: 'dashboard',
       title: 'Dashboard',
       type: 'item',
-      url: '/dashboard',
+      url: '/admin/dashboard',
       icon: icons.DashboardOutlined,
       breadcrumbs: false
     }
@@ -25,3 +25,5 @@ const dashboard = {
 };
 
 export default dashboard;
+
+
