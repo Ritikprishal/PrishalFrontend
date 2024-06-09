@@ -45,7 +45,7 @@ export default function Blog() {
   const fetchBlogs = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:1000/admin/getallblog', {
+      const response = await axios.get('https://prishalbackend.vercel.app/admin/getallblog', {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -92,7 +92,7 @@ export default function Blog() {
     formData.append('blog_img', blogImg);
 
     try {
-      const response = await axios.post('http://localhost:1000/admin/createblog', formData, {
+      const response = await axios.post('https://prishalbackend.vercel.app/admin/createblog', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           authorization: localStorage.getItem('authToken'),
@@ -116,7 +116,7 @@ export default function Blog() {
 
   const handleDelete = async (blogId) => {
     try {
-      const response = await axios.delete(`http://localhost:1000/admin/deleteblog/${blogId}`, {
+      const response = await axios.delete(`https://prishalbackend.vercel.app/admin/deleteblog/${blogId}`, {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -159,7 +159,7 @@ export default function Blog() {
     }
 
     try {
-      const response = await axios.put(`http://localhost:1000/admin/updateblog/${updatedBlog._id}`, formData, {
+      const response = await axios.put(`https://prishalbackend.vercel.app/admin/updateblog/${updatedBlog._id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           authorization: localStorage.getItem('authToken'),

@@ -41,7 +41,7 @@ export default function Service() {
   const fetchServices = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:1000/admin/getallservice', {
+      const response = await axios.get('https://prishalbackend.vercel.app/admin/getallservice', {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -84,7 +84,7 @@ export default function Service() {
     formData.append('service_img', serviceImg);
 
     try {
-      const response = await axios.post('http://localhost:1000/admin/createservice', formData, {
+      const response = await axios.post('https://prishalbackend.vercel.app/admin/createservice', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           authorization: localStorage.getItem('authToken'),
@@ -108,7 +108,7 @@ export default function Service() {
 
   const handleDelete = async (serviceId) => {
     try {
-      const response = await axios.delete(`http://localhost:1000/admin/deleteservice/${serviceId}`, {
+      const response = await axios.delete(`https://prishalbackend.vercel.app/admin/deleteservice/${serviceId}`, {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -152,7 +152,7 @@ export default function Service() {
     console.log('Updated Service Image:', updatedServiceImg);
 
     try {
-      const response = await axios.put(`http://localhost:1000/admin/updateservice/${updatedService._id}`, formData, {
+      const response = await axios.put(`https://prishalbackend.vercel.app/admin/updateservice/${updatedService._id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           authorization: localStorage.getItem('authToken'),

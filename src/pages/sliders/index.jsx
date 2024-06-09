@@ -44,7 +44,7 @@ export default function Job() {
   const fetchJobs = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:1000/admin/getalljobs', {
+      const response = await axios.get('https://prishalbackend.vercel.app/admin/getalljobs', {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -92,7 +92,7 @@ export default function Job() {
     };
 
     try {
-      const response = await axios.post('http://localhost:1000/admin/createjob', formData, {
+      const response = await axios.post('https://prishalbackend.vercel.app/admin/createjob', formData, {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -115,7 +115,7 @@ export default function Job() {
 
   const handleDelete = async (jobId) => {
     try {
-      const response = await axios.delete(`http://localhost:1000/admin/deletejob/${jobId}`, {
+      const response = await axios.delete(`https://prishalbackend.vercel.app/admin/deletejob/${jobId}`, {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -159,7 +159,7 @@ export default function Job() {
     };
 
     try {
-      const response = await axios.put(`http://localhost:1000/admin/updatejob/${updatedJob._id}`, formData, {
+      const response = await axios.put(`https://prishalbackend.vercel.app/admin/updatejob/${updatedJob._id}`, formData, {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },

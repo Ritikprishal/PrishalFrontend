@@ -59,7 +59,7 @@ export default function AuthLogin({ isDemo = false }) {
         })}
         onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
           try {
-            const response = await axios.post('http://localhost:1000/auth/login', {
+            const response = await axios.post('https://prishalbackend.vercel.app/auth/login', {
               userId: values.email,
               password: values.password,
             });

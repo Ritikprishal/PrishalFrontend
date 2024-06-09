@@ -44,7 +44,7 @@ export default function Team() {
   const fetchServices = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:1000/admin/getallteam', {
+      const response = await axios.get('https://prishalbackend.vercel.app/admin/getallteam', {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -93,7 +93,7 @@ export default function Team() {
     formData.append('profile_img', profilePic);
 
     try {
-      const response = await axios.post('http://localhost:1000/admin/createteam', formData, {
+      const response = await axios.post('https://prishalbackend.vercel.app/admin/createteam', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           authorization: localStorage.getItem('authToken'),
@@ -117,7 +117,7 @@ export default function Team() {
 
   const handleDelete = async (serviceId) => {
     try {
-      const response = await axios.delete(`http://localhost:1000/admin/deleteteam/${serviceId}`, {
+      const response = await axios.delete(`https://prishalbackend.vercel.app/admin/deleteteam/${serviceId}`, {
         headers: {
           authorization: localStorage.getItem('authToken'),
         },
@@ -164,7 +164,7 @@ export default function Team() {
     console.log('Updated Profile Pic:', updatedProfilePic);
 
     try {
-      const response = await axios.put(`http://localhost:1000/admin/updateteam/${updatedService._id}`, formData, {
+      const response = await axios.put(`https://prishalbackend.vercel.app/admin/updateteam/${updatedService._id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           authorization: localStorage.getItem('authToken'),

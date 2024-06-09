@@ -74,31 +74,31 @@ export default function DashboardDefault() {
 
   useEffect(() => {
     // Fetch data from API when component mounts
-    fetchDataFromAPI('http://localhost:1000/admin/getallsliders').then(data => {
+    fetchDataFromAPI('https://prishalbackend.vercel.app/admin/getallsliders').then(data => {
       setSliderData(data); // Update state with fetched data
     });
   }, []);
   useEffect(() => {
     // Fetch data from API when component mounts
-    fetchDataFromAPI('http://localhost:1000/admin/getallblog').then(data => {
+    fetchDataFromAPI('https://prishalbackend.vercel.app/admin/getallblog').then(data => {
       setBlogData(data); // Update state with fetched data
     });
   }, []);
   useEffect(() => {
     // Fetch data from API when component mounts
-    fetchDataFromAPI('http://localhost:1000/admin/getalljobs').then(data => {
+    fetchDataFromAPI('https://prishalbackend.vercel.app/admin/getalljobs').then(data => {
       setJobData(data); // Update state with fetched data
     });
   }, []);
   useEffect(() => {
     // Fetch data from API when component mounts
-    fetchDataFromAPI('http://localhost:1000/admin/getallteam').then(data => {
+    fetchDataFromAPI('https://prishalbackend.vercel.app/admin/getallteam').then(data => {
       setTeamData(data); // Update state with fetched data
     });
   }, []);
   useEffect(() => {
     // Fetch data from API when component mounts
-    fetchDataFromAPI('http://localhost:1000/admin/getallservice').then(data => {
+    fetchDataFromAPI('https://prishalbackend.vercel.app/admin/getallservice').then(data => {
       setServiceData(data); // Update state with fetched data
     });
   }, []);

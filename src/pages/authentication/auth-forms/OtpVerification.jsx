@@ -21,7 +21,7 @@ const OtpVerification = () => {
         onSubmit: async (values, { setSubmitting, setErrors }) => {
             try {
                 // Replace with your API call for OTP verification
-                const response = await axios.post('http://localhost:1000/auth/otpverification', {
+                const response = await axios.post('https://prishalbackend.vercel.app/auth/otpverification', {
                     userId: values.email,
                     verificationcode: values.otp, // Use values.otp here
                 });
